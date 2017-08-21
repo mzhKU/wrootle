@@ -1,3 +1,4 @@
+*.swp
 resources/
 test.html
 xx_*/
