@@ -1,15 +1,14 @@
 # Tasks Priorities:
-2.2
-2.3
+1.1
+3.4
 
 # 1 Tasks: Back-end
+1 Google searchable
 2 Database for user entries
 3 Tracking of uploads to instagram
 
 # 2 Tasks: Maintenance
 1 JS: Evaluate other rescaling methods.
-2 Version control + github
-3 Establish workflow for deployment / refactoring
 4 Browser and OS compatibility of current state
 5 Tests
 
@@ -29,3 +28,12 @@
 5 Direct upload to instagram -> Connect user account
 6 Prepare/upload multiple wrootles with one click
 
+# 5 Tasks: Promotion
+1 Promote
+
+# 6 Tasks: Done
+2 Version control + github
+3 Establish workflow for deployment / refactoring
+
+# 7 Tasks: Read
+https://stackoverflow.com/questions/500431/what-is-the-scope-of-variables-in-javascript?rq=1
