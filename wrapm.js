@@ -14,6 +14,13 @@ $(document).ready(function() {
     // var textHeight = 0;
     var factor = 0.85;
 
+    // Special scaling for Courier font.
+    if ($('#inp').css('font-family') == "Courier") {
+        console.log("REFACTOR");
+        factor = factor*0.6;
+    }
+
+
     $('#inp').keyup(resize);
 
     function decreaseFontWidth(textHeight, factor, fontSize) {
@@ -39,6 +46,9 @@ $(document).ready(function() {
 
     function resize() {
         $('#hiddenSpan').html($('#inp').val());
+
+        //var fontFamily = $('#inp').css('font-family');
+
         var textHeight = $('#hiddenSpan').height();
         
         decreaseFontWidth(textHeight, factor, fontSize);
