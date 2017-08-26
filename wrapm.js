@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     // Global scope probably not required.
     // var textHeight = 0;
-    var factor = 0.85;
+    var factor = 0.75;
 
     $('#inp').keyup(resize);
 
