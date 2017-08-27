@@ -3,6 +3,8 @@ $(document).ready(function() {
     var textAreaHeight = $('#inp').height();
     var textAreaWidth  = $('#inp').width();
     var fontSize = 200;
+    var canvasElement;
+    var canvasElementURL;
 
     // Setup font.
     $('#inp').css('font-family', "Tahoma, sans-serif");
@@ -15,14 +17,26 @@ $(document).ready(function() {
     var factor = 0.75;
 
     $('#inp').keyup(resize);
-
     $('#screen').click(takeScreenshot);
 
     // https://github.com/niklasvh/html2canvas
     function takeScreenshot() {
         html2canvas($('#inp')).then(function(canvas) {
-            $('#screenShot').html(canvas);
+            canvasElement = canvas;
+            
+            // For development, disable in live.
+            $('#screenShot').html(canvasElement);
+
+            canvasElementURL = canvasElement.toDataURL();
         });
+        $('#wa').html(canvasElementURL);
+        setWhatsAppLink(canvasElementURL);
+    }
+
+    function setWhatsAppLink(ref) {
+        ref = "whatsapp://send?text="+ref;
+        $('#screen').attr("href", ref);
+        console.log($('#screen').attr("href"));
     }
 
     function decreaseFontWidth(textHeight, factor, fontSize) {

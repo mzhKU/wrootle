@@ -1,8 +1,10 @@
 /* ------------------------------- */
 /* Hide scrollbar. */
+/*
 body {
     overflow-y: hidden;
 }
+*/
 textarea,
 input[type="text"],
 input[type="button"],
