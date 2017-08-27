@@ -34,7 +34,7 @@ $(document).ready(function() {
     }
 
     function setWhatsAppLink(ref) {
-        ref = "whatsapp://send?text="+ref;
+        ref = "whatsapp://send?"+ref;
         $('#screen').attr("href", ref);
         console.log($('#screen').attr("href"));
     }
