@@ -29,6 +29,7 @@ input[type="submit"] {
     font-family: "Tahoma", sans-serif;
     word-wrap: break-word;
     border: 10px solid #000000;
+    padding-right: 10px;
     margin-top: 120px;
     margin-right: auto;
     margin-bottom: 20px;
@@ -48,6 +49,17 @@ input[type="submit"] {
 }
 /* ------------------------------- */
 
+
+/* ------------------------------- */
+/* Screenshot button               */
+#screen {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: initial;
+}
+/* ------------------------------- */
 
 
 

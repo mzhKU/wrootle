@@ -16,6 +16,15 @@ $(document).ready(function() {
 
     $('#inp').keyup(resize);
 
+    $('#screen').click(takeScreenshot);
+
+    // https://github.com/niklasvh/html2canvas
+    function takeScreenshot() {
+        html2canvas($('#inp')).then(function(canvas) {
+            $('#screenShot').html(canvas);
+        });
+    }
+
     function decreaseFontWidth(textHeight, factor, fontSize) {
         // Special scaling for Courier font.
         if ($('#inp').css('font-family') == "Courier") {

@@ -1,6 +1,7 @@
 # Tasks Priorities:
-1.1
+4.7
 3.4
+1.1
 
 # 1 Tasks: Back-end
 1 Google searchable
@@ -27,6 +28,7 @@
 4 Background patterns
 5 Direct upload to instagram -> Connect user account
 6 Prepare/upload multiple wrootles with one click
+7 Share on whatsapp with one click
 
 # 5 Tasks: Promotion
 1 Promote
