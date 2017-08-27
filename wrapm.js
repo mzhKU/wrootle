@@ -1,11 +1,11 @@
+var canvasElement;
+var canvasElementURL;
+
 $(document).ready(function() {
 
     var textAreaHeight = $('#inp').height();
     var textAreaWidth  = $('#inp').width();
     var fontSize = 200;
-    var canvasElement;
-    var canvasElementURL;
-
     // Setup font.
     $('#inp').css('font-family', "Tahoma, sans-serif");
     $('#inp').css('font-size', fontSize + "px");
@@ -30,14 +30,19 @@ $(document).ready(function() {
             canvasElementURL = canvasElement.toDataURL();
         });
         $('#wa').html(canvasElementURL);
-        setWhatsAppLink(canvasElementURL);
+        console.log(canvasElementURL);
+        $('#shareThis').attr("data-url", canvasElementURL);
+        $('#shareThis').attr("data-title", "TEST TITLE");
+        $('#shareThis').attr("data-description", "TEST DESCRIPTION");
     }
 
-    function setWhatsAppLink(ref) {
-        ref = "whatsapp://send?"+ref;
-        $('#screen').attr("href", ref);
-        console.log($('#screen').attr("href"));
-    }
+    /*
+    data-url
+    data-title
+    data-description
+    data-media
+    */
+
 
     function decreaseFontWidth(textHeight, factor, fontSize) {
         // Special scaling for Courier font.
